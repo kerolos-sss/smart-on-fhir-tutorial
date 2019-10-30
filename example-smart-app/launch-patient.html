@@ -35,13 +35,12 @@
     <!-- https://github.com/cerner/fhir-client-cerner-additions -->
     <script src='./lib/js/fhir-client-cerner-additions-1.0.0.js'></script>
     <script>
-        FHIR.oauth2.authorize({
-          'client': {
+        FHIR.oauth2.authorize(
+          {
             'client_id': app_client_id,
             'scope':  app_scope
-          },
-          'server': app_auth_server_url
-        }
+          }
+          
         );
       </script>
     <div class="spinner">
@@ -51,4 +50,3 @@
     </div>
   </body>
 </html>
-b3a3db55-3384-4b64-89dd-32193c2aba8a
