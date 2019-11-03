@@ -5,8 +5,11 @@
     function onError() {
       console.log('Loading error', arguments);
       ret.reject();
-      FHIR.oauth2.ready(onReady, onError);
-      return ret.promise();
+      var a = confirm("do you want to try again");
+      if(a){
+        FHIR.oauth2.ready(onReady, onError);
+        return ret.promise();
+      }
     }
 
     function onReady(smart)  {
